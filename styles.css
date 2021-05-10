@@ -18,6 +18,6 @@ body{
   background-color: #1e2338;
 }
 
-p, h2{
+p, h2, h5{
   color: rgba(255,255,255,.75);
 }
