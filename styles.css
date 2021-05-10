@@ -11,3 +11,13 @@
   50%{background-position:100% 19%}
   100%{background-position:0% 82%}
 }
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #1e2338;
+}
+
+p, h2{
+  color: rgba(255,255,255,.75);
+}
