@@ -3,6 +3,7 @@
   <head>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
@@ -13,6 +14,7 @@
     <meta content="https://i.imgur.com/AFwpQrQ.jpg" property="og:image">
     <meta content="#FC7D48" data-react-helmet="true" name="theme-color">
   </head>
+
   <body>
 
     <div id="elModal" class="modal">
@@ -60,7 +62,7 @@
         <p>this is the karlmarxgaming site</p>
       </div>
 
-      <div class="row row-cols-8 row-cols-md-3 g-3">
+      <div class="row row-cols-8 row-cols-md-3 g-3" data-masonry='{"percentPosition": true }'>
           <div class="col">
             <div class="card" style="background: #191d2e;">
               <img src="https://i.imgur.com/AFwpQrQ.jpg" class="card-img-top" alt="...">
@@ -138,8 +140,8 @@
           <div class="card" style="background: #191d2e;">
             <img src="https://i.imgur.com/kBMJxVU.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">snipe</h5>
-              <p class="card-text">berd 🙏🙏🙏❤❤❤</p>
+              <h5 class="card-title">ferret</h5>
+              <p class="card-text">ferret 🙏🙏🙏</p>
             </div>
           </div>
         </div>
@@ -148,9 +150,24 @@
     </div>
   </body>
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 <script>
+
+  $(document).ready(function(){
+    const $row = $('.row').masonry({
+      itemSelector: '.col',
+    });
+
+    $('body').show();
+    $row.masonry('layout');
+
+      $row.masonry('appended', true);
+          window.setTimeout(function() {
+            $row.masonry('layout');
+          }, 1000);
+    });
+
+
     var intervalID;
     $(".scrollthis").hover(function(){
       var $this = $(this);
@@ -177,4 +194,3 @@
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
