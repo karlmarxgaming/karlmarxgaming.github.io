@@ -15,13 +15,17 @@
     <meta content="#FC7D48" data-react-helmet="true" name="theme-color">
   </head>
   <body>
+
+    <div id="elModal" class="modal">
+      <img class="modal-content" id="imgModal">
+    </div>
+
     <nav style="background-color: #191d2e;" class="shadow-sm navbar navbar sticky-top navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand rainbow-text scrollthis" href="#">karlmarxgaming</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#colapsable" aria-controls="colapsable" aria-expanded="false" aria-label="Toggle navigation">          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="colapsable">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <marquee class="nav-link" behavior="scroll" direction="left" scrollamount="20">karlmarxgaming web</marquee>
@@ -50,28 +54,28 @@
           </div>
           <div class="col">
             <div class="card" style="background: #191d2e;">
-              <img src="https://i.imgur.com/AFwpQrQ.jpg" class="card-img-top" alt="...">
+              <img src="https://i.imgur.com/uTSmhdb.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">cat</h5>
-                <p class="card-text">this is a cat 👍👍👍</p>
+                <h5 class="card-title">ferret</h5>
+                <p class="card-text">this is a ferret 💖💖💖</p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card" style="background: #191d2e;">
-              <img src="https://i.imgur.com/AFwpQrQ.jpg" class="card-img-top" alt="...">
+              <img src="https://i.imgur.com/taBGq4w.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">cat</h5>
-                <p class="card-text">this is a cat 👍👍👍</p>
+                <p class="card-text">this is another cat 👍👍👍</p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card" style="background: #191d2e;">
-              <img src="https://i.imgur.com/AFwpQrQ.jpg" class="card-img-top" alt="...">
+              <img src="https://i.imgur.com/a3vjv4C.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">cat</h5>
-                <p class="card-text">this is a cat 👍👍👍</p>
+                <p class="card-text">this is a cat and also my pfp 👍👍👍</p>
             </div>
           </div>
         </div>
@@ -95,5 +99,14 @@
       var s = ele.text().substr(1)+ele.text().substr(0,1);
       ele.text(s);
     }
+
+    $("img").on("click", function(){
+      $('#elModal').show();
+      $('#imgModal').attr("src", this.src);
+    });
+
+    $("#elModal").on("click", function(){
+      $('#elModal').hide();
+    });
 
 </script>
