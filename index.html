@@ -31,17 +31,36 @@
               <marquee class="nav-link" behavior="scroll" direction="left" scrollamount="20">karlmarxgaming web</marquee>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="https://karlmarxposting.tumblr.com/">my tumblr</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/karlmarxfishing">my twitter</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">my github</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="https://github.com/karlmarxgaming">profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://github.com/karlmarxgaming/karlmarxgaming.github.io">page source</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
               <a class="nav-link" href="https://www.marxists.org/archive/marx/works/1865/value-price-profit/">real karl marx</a>
             </li>
           </ul>
+          <a style="color: rgba(255,255,255,.75);" class="nav-link d-flex px-0">karlmarxgaming#5362</a>
+
         </div>
       </div>
     </nav>
+
     <div class="container" style="margin-top: 1rem; margin-bottom: 1rem;">
+
       <div>
         <h2>welcome!!!</h2>
         <p>this is the karlmarxgaming site</p>
       </div>
+
       <div class="row row-cols-8 row-cols-md-3 g-3 my-1">
           <div class="col">
             <div class="card" style="background: #191d2e;">
@@ -79,8 +98,18 @@
             </div>
           </div>
         </div>
+        <div class="col">
+          <div class="card" style="background: #191d2e;">
+            <img src="https://i.imgur.com/osoM5kj.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">garifile</h5>
+              <p class="card-text">garfie 🧡🧡🧡</p>
+            </div>
+          </div>
+        </div>
       </div>
 
+    </div>
   </body>
 </html>
 
@@ -101,7 +130,7 @@
     }
 
     $("img").on("click", function(){
-      $('#elModal').show();
+      $('#elModal').css('display', 'flex');
       $('#imgModal').attr("src", this.src);
     });
 
