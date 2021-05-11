@@ -62,7 +62,7 @@
         <p>this is the karlmarxgaming site</p>
       </div>
 
-      <div class="row row-cols-8 row-cols-md-3 g-3" data-masonry='{"percentPosition": true }'>
+      <div class="row row-cols-8 row-cols-md-4 g-3" data-masonry='{"percentPosition": true }'>
           <div class="col">
             <div class="card" style="background: #191d2e;">
               <img src="https://i.imgur.com/AFwpQrQ.jpg" class="card-img-top" alt="...">
@@ -150,23 +150,27 @@
     </div>
   </body>
 </html>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 <script>
 
   $(document).ready(function(){
     const $row = $('.row').masonry({
-      itemSelector: '.col',
+      itemSelector: '.col'
     });
 
     $('body').show();
-    $row.masonry('layout');
+
+    $row.imagesLoaded(function () {
+      $row.masonry();
+      console.log("loded");
+    });
 
       $row.masonry('appended', true);
           window.setTimeout(function() {
-            $row.masonry('layout');
+            $row.masonry();
           }, 1000);
     });
-
 
     var intervalID;
     $(".scrollthis").hover(function(){
