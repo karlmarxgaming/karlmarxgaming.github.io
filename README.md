@@ -8,3 +8,8 @@ one ofc my most ambitious projhects
 
 
 --sara
+
+# to do
+* make like a script that like reads a json file containing like all of the webstit eor smtn as far as i know (not very far) i think this is possible
+
+* improbve user experience
